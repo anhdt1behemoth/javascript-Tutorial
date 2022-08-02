@@ -4,7 +4,6 @@ let next = document.querySelector(".next");
 let close = document.querySelector(".close");
 let galleryImg = document.querySelector(".gallery__inner img");
 let gallery = document.querySelector(".gallery");
-
 let current = 0;
 
 function galleryShow() {
