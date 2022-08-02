@@ -64,11 +64,21 @@ function checkLengthError(input, min , max) {
   return false
 
 }
+
+function checkMatchPassword(passwordInput, cfPasswordInput){
+  if(passwordInput.value !== cfPasswordInput.value){
+  showError(cfPasswordInput, 'MK khong trung khop')
+  return true
+  }
+  return false
+}
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let isEmptyError = checkEmptyError([username, email, password, confirmPassword]);
   let isEmailError = checkEmail(email)
   let isUserNameLengthError = checkLengthError(username, 3, 15)
-  let isPasswordLengthError = checkLengthError(password)
+  let isPasswordLengthError = checkLengthError(password, 6 ,20)
+
+  let isMatchError = checkMatchPassword(password, confirmPassword)
 });
