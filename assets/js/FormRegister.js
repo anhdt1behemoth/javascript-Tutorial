@@ -81,4 +81,10 @@ form.addEventListener("submit", function (e) {
   let isPasswordLengthError = checkLengthError(password, 6 ,20)
 
   let isMatchError = checkMatchPassword(password, confirmPassword)
+
+  if(isEmailError|| isEmptyError || isUserNameLengthError || isPasswordLengthError ||isMatchError) {
+    
+  }else {
+    
+  }
 });
