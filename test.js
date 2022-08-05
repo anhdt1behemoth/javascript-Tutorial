@@ -1,2 +1,3 @@
-var test = 9032;
-console.log(test);
+(function(){
+    console.log("goi ham")
+}).call(this)
